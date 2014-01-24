@@ -18,20 +18,20 @@ if (typeof Object.create !== "function") {
 	var options = {
 		widthMin: 20							//minimum input width
 		,widthMax: 0							//maximum input width
-		,width: 0								//fixed input width - overrides widthMin and widthMax
-		,enableRegex: false
-		,enableCompare: false
-		,delay: 500								//
-		,jqueryUi: true
-		,inputClass: ""
-		,placeholder: "Filter"
-		,dateFormats: ['dd/mm/yyyy', 'dd-mm-yyyy', 'yyyy-dd-mm', 'yyyy/dd/mm']
-		,beforeFilter: function () {}
-		,afterFilter: function () {}
-		,beforeCreate: function () {}
-		,afterCreate: function () {}
-		,beforeDestroy: function () {}
-		,afterDestroy: function () {}
+		,width: 0							//fixed input width - overrides widthMin and widthMax
+		,enableRegex: false						//toggles RegEx filtering
+		,enableCompare: false						//toggles value/date compare
+		,delay: 500							//delay before filtering happens (0 - instant)
+		,jqueryUi: true							//toggles jQueryUi for icon tooltips
+		,inputClass: ""							//class applied to input fields
+		,placeholder: "Filter"						//input's placeholder
+		,dateFormats: ['dd/mm/yyyy', 'dd-mm-yyyy', 'yyyy-dd-mm', 'yyyy/dd/mm'] //date formats for date compare
+		,beforeFilter: function () {}					//event
+		,afterFilter: function () {}					//event
+		,beforeCreate: function () {}					//event
+		,afterCreate: function () {}					//event
+		,beforeDestroy: function () {}					//event
+		,afterDestroy: function () {}					//event
 	};
 		
 	var filterableConstruct = {
