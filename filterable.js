@@ -1,6 +1,6 @@
 /*!
  * Copyright 2014 WebScripts
- * Released under the MIT license
+ * Released under the MIT license (http://choosealicense.com/licenses/mit/)
  */
  
  //Utility
@@ -26,6 +26,7 @@ if (typeof Object.create !== "function") {
 		,inputClass: ""							//class applied to input fields
 		,placeholder: "Filter"						//input's placeholder
 		,dateFormats: ['dd/mm/yyyy', 'dd-mm-yyyy', 'yyyy-dd-mm', 'yyyy/dd/mm'] //date formats for date compare
+		,rangeSeparator: ";"						//separates value/date ranges
 		,beforeFilter: function () {}					//event
 		,afterFilter: function () {}					//event
 		,beforeCreate: function () {}					//event
@@ -161,7 +162,7 @@ if (typeof Object.create !== "function") {
 					filter.operator = match;
 					return filter;
 				}
-				var range = filter.value.split(";");	
+				var range = filter.value.split(this.options.rangeSeparator);	
 				if (range.length == 2) {
 					var min = range[0];
 					var max = range[1];
